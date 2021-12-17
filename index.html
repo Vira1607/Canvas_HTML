@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<META charset="utf-8"><TITLE>SRS 3</title>
+<style></style>
+</head>
+
+<body bgcolor="#cc99ff">
+
+<canvas id="canvas" width="300" height="300" background-color=""></canvas>
+
+<script>
+	var canvas=document.getElementById("canvas");
+	var ctx=canvas.getContext("2d");
+	ctx.fillStyle="Red";
+	for (var i=0; i<8; i++){
+		ctx.fillRect(i*10, i*10, 10, 10);
+	}
+	ctx.fillStyle="#ff6600";
+	ctx.fillRect(90, 0, 50, 90);
+	ctx.fillStyle="Green";
+	ctx.fillRect(140, 0, 50, 90);
+	ctx.fillStyle="#660066";
+	ctx.fillRect(190, 0, 50, 90);
+	
+	var circle=function (x, y, radius) {
+		ctx.beginPath();
+		ctx.arc(x, y, radius, 0, Math.PI*2, false);
+		ctx.stroke();
+	};
+	
+	ctx.fillStyle="SkyBlue";
+	ctx.fillRect(0, 100, 300, 100);
+	
+	ctx.lineWidth=4;
+	
+	ctx.strokeStyle="Red";
+	circle(75, 175, 30);
+	
+	ctx.strokeStyle="Orange";
+	circle(75, 175, 35);
+	
+	ctx.strokeStyle="Yellow";
+	circle(75, 175, 40);
+	
+	ctx.strokeStyle="Green";
+	circle(75, 175, 45);
+	
+	ctx.strokeStyle="Blue";
+	circle(75, 175, 50);
+	
+	ctx.strokeStyle="Purple";
+	circle(75, 175, 55);
+	
+	ctx.fillStyle="#663300";
+	ctx.fillRect(0, 175, 300, 60);
+	
+	ctx.fillStyle="#ff0066";
+	ctx.beginPath();
+	ctx.moveTo(175, 200);
+	ctx.lineTo(175, 160);
+	ctx.lineTo(205, 130);
+	ctx.lineTo(235, 160);
+	ctx.lineTo(235, 200);
+	ctx.lineTo(175, 200);
+	ctx.fill();
+</script>
+
+<p><o:p>&nbsp;</o:p></p>
+
+</body>
+
+</html>
